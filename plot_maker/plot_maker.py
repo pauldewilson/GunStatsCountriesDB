@@ -18,7 +18,8 @@ class PlotMaker:
                                    mode='markers',
                                    text=df_reg["country"],
                                    marker=dict(size=df_reg["Rate"],
-                                               opacity=0.5),
+                                               opacity=0.5,
+                                               sizemin=5),
                                    name=each_region),
                         )
 
