@@ -46,6 +46,10 @@ class DFGuns:
                                     left_on='country',
                                     right_on='Country', how='inner')
 
+            # fill any missing values as median and convert civ firearms to float
+            df_guns_rate.fillna(df_guns_rate.median(), inplace=True)
+            df_guns_rate['firearms_owned_civilians'] = df_guns_rate['firearms_owned_civilians'].astype(float)
+
             return df_guns_rate
         except KeyError:
             print("Probable column name conflict, likely column names changed at source")
