@@ -64,16 +64,14 @@ class PlotMaker:
                           'firearms_per_100_persons': 'Firearms per 100 people',
                           'Rate': 'Murder Rate per 100,000'}
         # layout params
-        layout = go.Layout(title=f"Scatter Graph showing {ux_axes_labels[x_axis]} (X-Axis) "
-                                 f"against {ux_axes_labels[y_axis]} (Y-Axis) where"
-                                 f" marker size represents {ux_axes_labels[z_axis]} (Z-axis)",
+        layout = go.Layout(title=f"{ux_axes_labels[x_axis]} against {ux_axes_labels[y_axis]} where"
+                                 f" size = {ux_axes_labels[z_axis]}",
                            xaxis=dict(
                                title=ux_axes_labels[x_axis],
                                type='log'),
                            yaxis=dict(
                                title=ux_axes_labels[y_axis],
-                               type='log'),
-                           height=1000)
+                               type='log'))
 
         # fig to be plot
         return go.Figure(data=data, layout=layout)
