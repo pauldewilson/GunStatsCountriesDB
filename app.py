@@ -10,7 +10,7 @@ from dash.dependencies import Input, Output
 
 # initialise Dash app
 app = Dash(__name__,
-           external_stylesheets=[dbc.themes.FLATLY])
+           external_stylesheets=[dbc.themes.COSMO])
 
 # generate dataframe
 df = DFGuns().return_dataframe()

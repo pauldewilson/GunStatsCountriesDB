@@ -71,7 +71,8 @@ class PlotMaker:
                                type='log'),
                            yaxis=dict(
                                title=ux_axes_labels[y_axis],
-                               type='log'))
+                               type='log'),
+                           plot_bgcolor='rgb(233, 236, 239)')
 
         # fig to be plot
         return go.Figure(data=data, layout=layout)
